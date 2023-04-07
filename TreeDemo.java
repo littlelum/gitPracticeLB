@@ -82,10 +82,15 @@ class BinarySearchTree{
    /*
    a method to find the node in the tree
    with a specific value
+   * @param root The root node
+   * @param key the key to look for
+   * @return Whether the key is in the tree or not
    */
    public boolean find(Node root, int key){
-	  //implement me
-      return false;           
+      if (root == null) {return false;}
+      else if (root.value == key) {return true;}
+      else if (root.value > key) {return find(root.left, key);}
+      else {return find (root.right, key);}
    }
    
    
