@@ -9,7 +9,8 @@ class Node{
    }
 
 }
-
+/*
+*/
 class BinarySearchTree{
 
    Node root;
@@ -68,9 +69,12 @@ class BinarySearchTree{
    
    /*
    post-order traversal
+   * @param root The root node
    */
    public void postOrderTraversal(Node root){
-      //implement me
+      if (root.left != null) {postOrderTraversal(root.left);}
+      if (root.right != null) {postOrderTraversal(root.right);}
+      System.out.println (root.value);
    }
    
    
